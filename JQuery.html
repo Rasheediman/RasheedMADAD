@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>FitChild</title>
+        <link type="text/css" rel="stylesheet" media="screen" href="jqtouch/themes/css/jqtouch.css">
+        <link type="text/css" rel="stylesheet" media="screen" href="jqtouch/themes/css/kilo.css">
+        <script src="jqtouch/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jqtouch/src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jqtouch/src/kilo.js" type="text/javascript" charset="utf-8"></script>
+        </script>
+    </head>
+    <body>
+        <div id="home">
+            <div class="toolbar">
+                <h1>FitChild</h1>
+                <a class="button flip" href="#settings">Get Fit</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a href="#about">About FitChild</a></li>
+            </ul>
+        </div>
+        <div id="about">
+            <div class="toolbar">
+                <h1>About</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <div>
+                <p>Fit Child is an Application that helps Adults combat the obesity o their children, using the BMI of their children in relation to the BMI index corresponding the children of the same age in their community</p>
+            </div>
+        </div>
+        <div id="dates">
+            <div class="toolbar">
+                <h1>Dates</h1>
+                <a class="button back" href="#">Back</a>
+            </div>
+            <ul class="edgetoedge">
+                <li class="arrow"><a id="0" href="#date">Today</a></li>
+                <li class="arrow"><a id="1" href="#date">Yesterday</a></li>
+                <li class="arrow"><a id="2" href="#date">2 Days Ago</a></li>
+                <li class="arrow"><a id="3" href="#date">3 Days Ago</a></li>
+                <li class="arrow"><a id="4" href="#date">4 Days Ago</a></li>
+                <li class="arrow"><a id="5" href="#date">5 Days Ago</a></li>
+                <li class="arrow"><a id="6" href="#date">6 Days Ago</a></li>
+                <li class="arrow"><a id="7" href="#date">7 Days Ago</a></li>
+            </ul>
+        </div>
+        <div id="date">
+            <div class="toolbar">
+                <h1>Date</h1>
+                <a class="button back" href="#">Back</a>
+                <a class="button slideup" href="#createEntry">+</a>
+            </div>
+            <ul class="edgetoedge">
+                <li id="entryTemplate" class="entry" style="display:none">
+                    <span class="label">BMI</span>
+                    
+                </li>
+            </ul>
+        </div>
+        <div id="createEntry">
+            <div class="toolbar">
+                <h1>New Entry</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul>
+                    <li><input type="text" placeholder="Height(cm)" 
+                        name="height" id="height" autocapitalize="off" 
+                        autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="text" placeholder="Weight(kg)" 
+                        name="weight" id="txtFirstNumber" autocapitalize="off" 
+                        autocorrect="off" autocomplete="off" /></li>
+                    <li><input type="submit" class="submit" name="action" 
+                        value="Compute BMI" /></li>
+                </ul>
+            </form>
+        </div>
+        <div id="settings">
+            <div class="toolbar">
+                <h1>Get Fit</h1>
+                <a class="button cancel" href="#">Cancel</a>
+            </div>
+            <form method="post">
+                <ul>
+                    <li><input id="hHeight" placeholder="height" type="text" name="height" id="height" /></li>
+                    <li><input id="wWeight" placeholder="Weight" type="text" name="weight" id="weight" /></li>
+                    <li><input placeholder="Age" type="text" name="Age"  id="Age" /></li>
+                    <li><input type="submit" class="submit" name="action" 
+                        value="Save Changes" /></li>
+                    <a class="button flip" onclick="division()">BMI</a>
+                    
+                </ul>
+            </form>
+        </div>
+         <div id="BMI">
+            <div class="toolbar">
+                <h1>Child's BMI</h1>
+                <a class="button cancel" href="division">Cancel</a>
+            </div>
+            <div id="result">
+                <p>Your child's Body Mass Index is</p>
+            </div>
+        </div>
+    </body>
+</html>
